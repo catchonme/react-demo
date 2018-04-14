@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import TreeBeard from '../common/treebeard'
-import data from '../mock/data'
+import TreeBeard  from '../common/treebeard'
+import data from './data'
 
 class TreeExample extends Component {
     constructor(props) {
@@ -8,16 +8,13 @@ class TreeExample extends Component {
         this.state = {};
         this.onToggle = this.onToggle.bind(this);
     }
-    
-    onToggle(node, toggled) {
-        /*if (this.state.cursor) {
-            this.state.cursor.active = false;
-        }*/
-        node.active = true;
+
+    onToggle(node, toggled){
         if (node.children) {
             node.toggled = toggled;
         }
-        this.setState({ cursor: node})
+
+        this.setState({ cursor: node });
     }
     render() {
         return (

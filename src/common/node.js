@@ -1,18 +1,21 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { VelocityTransitionGroup } from 'velocity-react'
-
-import NodeHeader from './header'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import {VelocityTransitionGroup} from 'velocity-react';
 
 class TreeNode extends Component {
-    constructor(){
+    constructor() {
         super();
         this.onClick = this.onClick.bind(this);
     }
 
     onClick() {
-        const { node, onToggle } = this.props;
-        const { toggled } = node;
+        const {node, onToggle} = this.props;
+        /*
+        * 开始node没有toggled属性，所以开始toggled是undefined
+        * 在components中onToggle函数中，给node增加了toggled属性
+        * 所以点击修改node的toggled属性
+        * */
+        const {toggled} = node;
 
         if (onToggle) {
             onToggle(node, !toggled);
@@ -20,34 +23,28 @@ class TreeNode extends Component {
     }
 
     animations() {
-        const { animations, node } = this.props;
+        const {animations} = this.props;
 
-        if (animations === false) {
-            return false;
-        }
-
-        const anim = Object.assign({}, animations, node.animations);
         return {
-            toggle: anim.toggle(this.props),
-            drawer: anim.drawer(this.props)
+            toggle: animations.toggle(this.props),
+            drawer: animations.drawer(this.props)
         };
     }
 
     decorators() {
-        const { decorators, node } = this.props;
-        let nodeDecorators = node.decorators || {};
+        // Merge Any Node Based Decorators Into The Pack
+        const {decorators} = this.props;
 
-        return Object.assign({}, decorators, nodeDecorators);
+        return Object.assign({}, decorators);
     }
 
     render() {
-        const { style } = this.props;
+        const {style} = this.props;
         const decorators = this.decorators();
         const animations = this.animations();
 
         return (
-            <li ref={ref => this.topLevelRef = ref}
-                style={style.base}>
+            <li style={style.base}>
                 {this.renderHeader(decorators, animations)}
 
                 {this.renderDrawer(decorators, animations)}
@@ -55,40 +52,33 @@ class TreeNode extends Component {
         );
     }
 
-    renderDrawer(decorators, animations) {
-        const { node: {toggled} } = this.props;
+    renderHeader(decorators, animations) {
+        const {node, style} = this.props;
+        const {children} = node;
+        const hasChildren = !!children;
 
-        if (!animations && !toggled) {
-            return null;
-        } else if (!animations && toggled) {
-            return this.renderChildren(decorators, animations);
-        }
-
-        const { animation, duration, ...restAnimationInfo } = animations.drawer;
         return (
-            <VelocityTransitionGroup {...restAnimationInfo}
-                ref={ref => this.velocityRef = ref}>
-                { toggled ? this.renderChildren(decorators, animations) : null}
+            <decorators.Header animations={animations}
+                                  node={node}
+                                  onClick={this.onClick}
+                                  style={style}
+                                  hasChildren={hasChildren}/>
+        );
+    }
+
+    renderDrawer(decorators, animations) {
+        const {node: {toggled}} = this.props;
+
+        const {...restAnimationInfo} = animations.drawer;
+        return (
+            <VelocityTransitionGroup {...restAnimationInfo}>
+                {toggled ? this.renderChildren(decorators, animations) : null}
             </VelocityTransitionGroup>
         );
     }
 
-    renderHeader(decorators, animations) {
-        const { node, style } = this.props;
-
-        return (
-            <NodeHeader
-                animations={animations}
-                decorators={decorators}
-                node={Object.assign({}, node)}
-                onClick={this.onClick}
-                style={style}
-            />
-        );
-    }
-
     renderChildren(decorators) {
-        const { animations, decorators:propDecorators, node, style } = this.props;
+        const {animations, decorators: propDecorators, node, style, onToggle} = this.props;
 
         if (node.loading) {
             return this.renderLoading(decorators);
@@ -100,21 +90,23 @@ class TreeNode extends Component {
         }
 
         return (
-            <ul style={style.subtree}
-                ref={ref => this.subtreeRef = ref}>
-                {children.map((child, index) => <TreeNode {...this._eventBubbles()}
-                    animations={animations}
-                    decorators={propDecorators}
-                    key={child.id || index}
-                    node={child}
-                    style={style}/>
+            <ul style={style.subtree}>
+                {children.map((child, index) =>
+                    <TreeNode
+                          animations={animations}
+                          decorators={propDecorators}
+                          onToggle={onToggle}
+                          key={child.id || index}
+                          node={child}
+                          style={style}
+                    />
                 )}
             </ul>
         );
     }
 
     renderLoading(decorators) {
-        const { style } = this.props;
+        const {style} = this.props;
 
         return (
             <ul style={style.subtree}>
@@ -123,14 +115,6 @@ class TreeNode extends Component {
                 </li>
             </ul>
         );
-    }
-
-    _eventBubbles() {
-        const { onToggle } = this.props;
-
-        return {
-            onToggle
-        };
     }
 }
 
