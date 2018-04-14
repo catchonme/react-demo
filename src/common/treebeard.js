@@ -7,8 +7,22 @@ import defaultTheme from '../themes/default';
 import defaultAnimations from '../themes/animations';
 
 class TreeBeard extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
+        this.onToggle = this.onToggle.bind(this);
+    }
+
+    onToggle(node, toggled){
+        if (node.children) {
+            node.toggled = toggled;
+        }
+
+        this.setState({ cursor: node });
+    }
+
     render() {
-        const {animations, decorators, data: propsData, onToggle, style} = this.props;
+        const {animations, decorators, data: propsData, style} = this.props;
 
         let data = propsData;
         // Support Multiple Root Nodes. Its not formally a tree, but its a use-case.
@@ -22,7 +36,7 @@ class TreeBeard extends Component {
                               decorators={decorators}
                               key={node.id || index}
                               node={node}
-                              onToggle={onToggle}
+                              onToggle={this.onToggle}
                               style={style.tree.node}/>
                 )}
             </ul>
@@ -40,7 +54,6 @@ TreeBeard.propTypes = {
         PropTypes.object,
         PropTypes.bool
     ]),
-    onToggle: PropTypes.func,
     decorators: PropTypes.object
 };
 
