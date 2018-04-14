@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import TreeNode from './node';
+import TreeNode from './treeNode';
 import defaultDecorators from './decorators';
 import defaultTheme from '../themes/default';
 import defaultAnimations from '../themes/animations';
@@ -18,7 +18,9 @@ class TreeBeard extends Component {
             node.toggled = toggled;
         }
 
-        this.setState({ cursor: node });
+        // 不触发this.state，不会重新渲染子组件，就不会有展开/收缩的效果了
+        // 但this.state里的数据并没有用
+        this.setState({ toggled: toggled });
     }
 
     render() {
