@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {VelocityTransitionGroup} from 'velocity-react';
+import { VelocityTransitionGroup } from 'velocity-react';
 
 class TreeNode extends Component {
     constructor() {
@@ -9,13 +9,13 @@ class TreeNode extends Component {
     }
 
     onClick() {
-        const {node, onToggle} = this.props;
+        const { node, onToggle } = this.props;
         /*
         * 开始node没有toggled属性，所以开始toggled是undefined
-        * 在components中onToggle函数中，给node增加了toggled属性
-        * 所以点击修改node的toggled属性
+        * 在treebeard中onToggle函数中，给node增加了toggled属性
+        * 点击修改node的toggled属性，来展开/收缩node.children
         * */
-        const {toggled} = node;
+        const { toggled } = node;
 
         if (onToggle) {
             onToggle(node, !toggled);
@@ -32,7 +32,6 @@ class TreeNode extends Component {
     }
 
     decorators() {
-        // Merge Any Node Based Decorators Into The Pack
         const {decorators} = this.props;
 
         return Object.assign({}, decorators);

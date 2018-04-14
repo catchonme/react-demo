@@ -9,6 +9,7 @@ Loading.propTypes = {
     style: PropTypes.object
 };
 
+// 显式header左边的三角形
 const HeaderToggle = ({style}) => {
     const {height, width} = style;
     const midHeight = height * 0.5;
