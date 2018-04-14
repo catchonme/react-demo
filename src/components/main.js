@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import TreeBeard  from '../common/treebeard'
-import data from './data'
+import data from '../mock/data'
 
 class TreeExample extends Component {
     render() {

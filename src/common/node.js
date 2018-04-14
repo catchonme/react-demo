@@ -58,10 +58,10 @@ class TreeNode extends Component {
 
         return (
             <decorators.Header animations={animations}
-                                  node={node}
-                                  onClick={this.onClick}
-                                  style={style}
-                                  hasChildren={hasChildren}/>
+                               node={node}
+                               onClick={this.onClick}
+                               style={style}
+                               hasChildren={hasChildren}/>
         );
     }
 
@@ -92,12 +92,12 @@ class TreeNode extends Component {
             <ul style={style.subtree}>
                 {children.map((child, index) =>
                     <TreeNode
-                          animations={animations}
-                          decorators={propDecorators}
-                          onToggle={onToggle}
-                          key={child.id || index}
-                          node={child}
-                          style={style}
+                        animations={animations}
+                        decorators={propDecorators}
+                        onToggle={onToggle}
+                        key={child.id || index}
+                        node={child}
+                        style={style}
                     />
                 )}
             </ul>

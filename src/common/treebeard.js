@@ -9,7 +9,7 @@ import defaultAnimations from '../themes/animations';
 class TreeBeard extends Component {
     constructor(props) {
         super(props);
-
+        this.state = {};
         this.onToggle = this.onToggle.bind(this);
     }
 
@@ -17,6 +17,8 @@ class TreeBeard extends Component {
         if (node.children) {
             node.toggled = toggled;
         }
+
+        this.setState({ cursor: node });
     }
 
     render() {
