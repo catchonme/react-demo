@@ -1,0 +1,36 @@
+* {box-sizing: border-box}
+html, body, #root {
+    font-size: 16px;
+    height:100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 2rem;
+}
+
+.blockOne {
+    height: 2rem;
+    background: rgb(41, 41, 41);
+}
+
+.blockTwo {
+    background: rgb(102, 102, 102);
+    padding: 1rem;
+    /*color:#000;*/
+    color: white;
+}
+
+.blockThree {
+    height: 2rem;
+    background: rgb(41, 41, 41)
+}
+
+table tr td:nth-of-type(2){
+    color: #000;
+}
+button {
+    color: #000;
+}
