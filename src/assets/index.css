@@ -1,0 +1,445 @@
+@import './base.css';
+
+.hljs{display:block;overflow-x:auto;padding:.5em;background:#fdf6e3;color:#657b83;-webkit-text-size-adjust:none}.hljs-comment,.hljs-template_comment,.diff .hljs-header,.hljs-doctype,.hljs-pi,.lisp .hljs-string,.hljs-javadoc{color:#93a1a1}.hljs-keyword,.hljs-winutils,.method,.hljs-addition,.css .hljs-tag,.hljs-request,.hljs-status,.nginx .hljs-title{color:#859900}.hljs-number,.hljs-command,.hljs-string,.hljs-tag .hljs-value,.hljs-rules .hljs-value,.hljs-phpdoc,.hljs-dartdoc,.tex .hljs-formula,.hljs-regexp,.hljs-hexcolor,.hljs-link_url{color:#2aa198}.hljs-title,.hljs-localvars,.hljs-chunk,.hljs-decorator,.hljs-built_in,.hljs-identifier,.vhdl .hljs-literal,.hljs-id,.css .hljs-function{color:#268bd2}.hljs-attribute,.hljs-variable,.lisp .hljs-body,.smalltalk .hljs-number,.hljs-constant,.hljs-class .hljs-title,.hljs-parent,.hljs-type,.hljs-link_reference{color:#b58900}.hljs-preprocessor,.hljs-preprocessor .hljs-keyword,.hljs-pragma,.hljs-shebang,.hljs-symbol,.hljs-symbol .hljs-string,.diff .hljs-change,.hljs-special,.hljs-attr_selector,.hljs-subst,.hljs-cdata,.css .hljs-pseudo,.hljs-header{color:#cb4b16}.hljs-deletion,.hljs-important{color:#dc322f}.hljs-link_label{color:#6c71c4}.tex .hljs-formula{background:#eee8d5}
+.markdown pre {
+  background: #2B2B2B;
+  color: #E6E1DC;
+  border: none;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+.markdown {
+  opacity: 0;
+  -webkit-transition: opacity .8s ease;
+  transition: opacity .8s ease;
+}
+.markdown li {
+  margin: 10px 0;
+}
+.fadeIn {
+  opacity: 100!important;
+}
+.fadeOut {
+  opacity: 0!important;
+}
+code {
+  background: #2B2B2B;
+  color: #E6E1DC;
+}
+hr {
+  border-top: 1px dashed #412816;
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+h2 {
+  margin: 30px 0;
+  color: #FFCEA9;
+  font-size: 34px;
+}
+h3 {
+  font-size: 28px;
+}
+p {
+  font-size: 20px;
+}
+::-webkit-scrollbar {
+  width: 1px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ebd9ba;
+}
+/**
+ * doc
+ */
+html {
+  background-color: #301711;
+  overflow-x: hidden;
+}
+body {
+  background: #301711;
+  color: #c5aa97;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  line-height: 1;
+  position: relative;
+  opacity: 0.8;
+}
+a {
+  color: #facd3e;
+  text-decoration: none;
+  line-height: inherit;
+}
+header {
+  background-color: #ebd9ba;
+  overflow: hidden;
+  cursor: default;
+  user-select: none;
+}
+
+article {
+  color: #d0bbab;
+  min-height: 1000px;
+}
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.75em;
+  margin: 0;
+}
+header h1, header h2 {
+  color: #301711;
+  font-weight: 300;
+}
+article h2, article h3 {
+  font-weight: 300;
+}
+article h1,
+article h2,
+article h3 {
+  cursor: pointer;
+}
+article h3 {
+  margin: 40px 0 20px 0;
+}
+article p {
+  margin-top: 20px;
+}
+header h1 em {
+  color: #cd9d05;
+  font-style: normal;
+}
+a:hover, a:focus {
+  color: #f9c725;
+  text-decoration: none;
+}
+a:active, a:hover {
+  outline: 0;
+}
+footer {
+  padding: 20px 0;
+}
+.loading {
+  font-size: 20px;
+  margin-top: 10px;
+  height: 25px;
+  -webkit-transition: opacity .8s ease;
+  transition: opacity .8s ease;
+}
+.header {
+  position: relative;
+  padding-bottom: 60px;
+}
+.header .title {
+  padding: 20px 0 30px 0;
+}
+.header .first {
+  font-size: 150px;
+  font-weight: bold;
+  line-height: 1.2em;
+  display: block;
+  float: left;
+  padding-right: 50px;
+}
+.header .logo {
+  width: 600px;
+  position: absolute;
+  bottom: -272px;
+  right: -84px;
+  opacity: 0.8;
+}
+@media only screen and (max-width: 500px) {
+  .header {
+    padding-bottom: 10px;
+  }
+  .header .logo {
+    display: none!important;
+  }
+  .header .first {
+    font-size: 100px;
+    padding: 0;
+    float: none;
+  }
+  .header .title {
+    font-size: 10px;
+    padding: 10px 0;
+  }
+  .header .description p {
+    padding: 0!important;
+    font-size: 40px;
+  }
+  .autoresponsive-react-ribbon {
+    display: none;
+  }
+  .header .description {
+    position: static!important;
+  }
+  .github-btn {
+    position: fixed!important;
+    top: 15px!important;
+    right: 0px!important;
+  }
+}
+.header .description {
+  position: relative;
+  z-index: 99999;
+}
+.header .description p {
+  font-size: 50px;
+  padding-top: 26px;
+  padding-right: 40px;
+  text-rendering: optimizeLegibility;
+  font-weight: normal;
+  line-height: 1.2em;
+}
+.header .version {
+  color: #333;
+}
+.btn-group button {
+  background-color: transparent;
+  border-color: #796b1d;
+  color: #d0bbab;
+  outline: 0;
+  margin-bottom: 8px;
+}
+.btn-group button:hover,
+.btn-group button:focus,
+.btn-group button:active,
+.btn-group .focus{
+  background-color: transparent!important;
+  color: #fff!important;
+  outline: 0!important;
+}
+.rc-autoresponsive-container {
+  margin-top: 20px;
+}
+.i18n-buttons {
+  height: 40px;
+}
+.github-btn {
+  overflow: hidden;
+  z-index: 999;
+  border: 0;
+  position: absolute;
+  top: 0;
+  right: 40px;
+  width: 100px;
+  height: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn:hover,
+.btn:focus,
+.btn.focus {
+  color: #333;
+  text-decoration: none;
+}
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity: .65;
+}
+a.btn.disabled,
+fieldset[disabled] a.btn {
+  pointer-events: none;
+}
+
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-default:focus,
+.btn-default.focus {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c;
+}
+.btn-default:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.btn-default:active:hover,
+.btn-default.active:hover,
+.open > .dropdown-toggle.btn-default:hover,
+.btn-default:active:focus,
+.btn-default.active:focus,
+.open > .dropdown-toggle.btn-default:focus,
+.btn-default:active.focus,
+.btn-default.active.focus,
+.open > .dropdown-toggle.btn-default.focus {
+  color: #333;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+}
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  background-image: none;
+}
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default,
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled.focus,
+.btn-default[disabled].focus,
+fieldset[disabled] .btn-default.focus,
+.btn-default.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-default:active,
+.btn-default.disabled.active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-default.active {
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-default .badge {
+  color: #fff;
+  background-color: #333;
+}
+
+.btn-group,
+.btn-group-vertical {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.btn-group > .btn,
+.btn-group-vertical > .btn {
+  position: relative;
+  float: left;
+}
+.btn-group > .btn:hover,
+.btn-group-vertical > .btn:hover,
+.btn-group > .btn:focus,
+.btn-group-vertical > .btn:focus,
+.btn-group > .btn:active,
+.btn-group-vertical > .btn:active,
+.btn-group > .btn.active,
+.btn-group-vertical > .btn.active {
+  z-index: 2;
+}
+.btn-group .btn + .btn,
+.btn-group .btn + .btn-group,
+.btn-group .btn-group + .btn,
+.btn-group .btn-group + .btn-group {
+  margin-left: -1px;
+}
+.btn-toolbar {
+  margin-left: -5px;
+}
+.btn-toolbar .btn,
+.btn-toolbar .btn-group,
+.btn-toolbar .input-group {
+  float: left;
+}
+.btn-toolbar > .btn,
+.btn-toolbar > .btn-group,
+.btn-toolbar > .input-group {
+  margin-left: 5px;
+}
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  border-radius: 0;
+}
+.btn-group > .btn:first-child {
+  margin-left: 0;
+}
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-group > .btn:last-child:not(:first-child),
+.btn-group > .dropdown-toggle:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.btn-group > .btn-group {
+  float: left;
+}
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+  border-radius: 0;
+}
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.btn-group .dropdown-toggle:active,
+.btn-group.open .dropdown-toggle {
+  outline: 0;
+}
+.btn-group > .btn + .dropdown-toggle {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+.btn-group > .btn-lg + .dropdown-toggle {
+  padding-right: 12px;
+  padding-left: 12px;
+}
+.btn-group.open .dropdown-toggle {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+.btn-group.open .dropdown-toggle.btn-link {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
