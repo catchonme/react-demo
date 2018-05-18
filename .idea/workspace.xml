@@ -2,24 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32c8fd44-659f-403a-8101-651bd8714ef0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/thunk-demo.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/srcC/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/srcD/components/app.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/srcD/components/main.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/srcD/components/theme-context.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/srcD/components/themed-button.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/srcD/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/srcD/registerServiceWorker.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/src/README.md" afterPath="$PROJECT_DIR$/srcC/README.md" />
-      <change beforePath="$PROJECT_DIR$/src/assets/base.css" afterPath="$PROJECT_DIR$/srcC/assets/base.css" />
-      <change beforePath="$PROJECT_DIR$/src/assets/index.css" afterPath="$PROJECT_DIR$/srcC/assets/index.css" />
-      <change beforePath="$PROJECT_DIR$/src/common/linkedlist.js" afterPath="$PROJECT_DIR$/srcC/common/linkedlist.js" />
-      <change beforePath="$PROJECT_DIR$/src/common/response.js" afterPath="$PROJECT_DIR$/srcC/common/response.js" />
-      <change beforePath="$PROJECT_DIR$/src/common/sort.js" afterPath="$PROJECT_DIR$/srcC/common/sort.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.js" afterPath="$PROJECT_DIR$/srcC/components/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/simplest.js" afterPath="$PROJECT_DIR$/srcC/components/simplest.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/waterfall.js" afterPath="$PROJECT_DIR$/srcC/components/waterfall.js" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/registerServiceWorker.js" afterPath="$PROJECT_DIR$/srcC/registerServiceWorker.js" />
-      <change beforePath="$PROJECT_DIR$/src/style.css" afterPath="$PROJECT_DIR$/srcC/style.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,10 +38,20 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="186">
-                <caret line="4" column="37" lean-forward="true" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+                <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/srcD/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/src/thunk-demo.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="e#0#53#0" expanded="true" />
               </folding>
@@ -72,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="21" lean-forward="true" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+              <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -188,6 +188,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\UPUPW\htdocs\fro\util\react\react-demo" />
       <recent name="D:\UPUPW\htdocs\fro\util\react\react-demo\src" />
       <recent name="D:\UPUPW\htdocs\fro\util\react\react-demo\src\components" />
       <recent name="D:\UPUPW\htdocs\fro\util\react\react-demo\src\common" />
@@ -229,18 +230,17 @@
       <workItem from="1523837012507" duration="5599000" />
       <workItem from="1525501057694" duration="3795000" />
       <workItem from="1525652112365" duration="187000" />
-      <workItem from="1526612242041" duration="977000" />
+      <workItem from="1526612242041" duration="1104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36703000" />
+    <option name="totallyTimeSpent" value="36830000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17986111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17986111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -555,7 +555,7 @@
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="21" lean-forward="true" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -563,10 +563,18 @@
     <entry file="file://$PROJECT_DIR$/src/thunk-demo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
             <element signature="e#0#53#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcD/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -579,7 +587,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="186">
-            <caret line="4" column="37" lean-forward="true" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+            <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
             <folding />
           </first_editor>
           <second_editor />
