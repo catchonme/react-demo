@@ -3,4 +3,5 @@
     - srcB -> [react-show](https://github.com/react-tools/react-show)
     - srcC -> [autoresponsive-react](https://github.com/catchonme/autoresponsive-react)
     - srcD -> React 16.3 新特性 createContext 练习
-    - src -> [redux-thunk]()  demo 练习
+    - srcE -> [redux-thunk](https://github.com/reduxjs/redux-thunk)  demo 练习
+    - src -> [redux-saga](https://github.com/redux-saga/redux-saga)  demo 练习
